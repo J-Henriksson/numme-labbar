@@ -37,7 +37,7 @@ MKsumma_1 = sum((res_1).^2)
 figure(2)
 clf
 plot(res_1(1:graf_period,1))
-title('Residual (T - modell_1)');
+title('Residual (T - modell 1)');
 xlabel('tid (dagar)');
 ylabel("differans")
 
@@ -69,7 +69,7 @@ MKsumma_2 = sum((res_2).^2)
 figure(4)
 clf
 plot(res_2(1:graf_period,1))
-title('Residual (T - modell_1)');
+title('Residual (T - modell 2)');
 xlabel('tid (dagar)');
 ylabel("differans")
 
