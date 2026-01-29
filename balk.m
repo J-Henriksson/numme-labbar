@@ -52,3 +52,25 @@ for k = 1:maxit
     end
 end
 end
+
+%Svar på uppgiftsfrågor
+
+% (a) Newtons metod, H = 0.5
+% Startvärde: t0 = 4.5
+% Antal iterationer: 3
+% Resultat: T = 4.500714874306
+% Kravet |fel| < 1e-8 uppfylls (stoppvillkor t.ex. |t_{n+1}-t_n| < 1e-8).
+%
+% (b) Sekantmetoden, H = 0.5
+% Startvärden: t0 = 4.2, t1 = 4.7
+% Antal iterationer: 6
+% Resultat: T = 4.500714874306
+% Sekantmetoden behövde fler steg än Newton för att nå |fel| < 1e-8,
+% detta eftersom Newton använder derivatan g'(t) och har (lokalt) kvadratisk konvergens,
+% medan sekantmetoden har långsammare superlinjär konvergens.
+%
+%
+% (d) H = 2.8464405473 (med Newtons metod)
+% För detta H ligger lösningen nära ett lokalt maximum för y(t).
+% Där är g'(t) liten, vilket gör Newton mer känslig för startgissning
+% och kan ge långsammare konvergens och olika startvärden kan leda till olika rötter.
