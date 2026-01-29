@@ -98,7 +98,9 @@ Y = Y(idx);
 
 %Find the 4th degree polynomial p(x) that goes through the 5 points
 %p(x) = c4*x^4 + c3*x^3 + c2*x^2 + c1*x + c0
-coeff = polyfit(X, Y, 4);
+X_col = X';
+A = [X_col.^4, X_col.^3, X_col.^2, X_col, ones(size(X_col))];
+coeff = A \ Y';
 
 %Print coefficients
 fprintf('\n=== 4th degree polynomial coefficients ===\n');
