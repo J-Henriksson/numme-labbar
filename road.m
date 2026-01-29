@@ -1,7 +1,7 @@
 clear; clc; close all;
 
 %Settings
-tol   = 1e-10;      % lämplig tolerans
+tol   = 1e-10;      % suitable tolerance
 maxit = 50;         % max amount of Newton iterations
 showPlots = true;   % show circle plots + Newton iterates
 
@@ -41,7 +41,7 @@ for i = 1:3
     J = @(p) [ 2*(p(1)-Ai(1))  2*(p(2)-Ai(2));
                2*(p(1)-Bi(1))  2*(p(2)-Bi(2)) ];
 
-    %Run Newton (no damping / no step-halving)
+    %Run Newton
     [p_sol, p_hist, step_hist, res_hist] = newton2D(F, J, p0(i,:).', tol, maxit);
 
     P(i,:) = p_sol.';
